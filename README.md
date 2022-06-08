@@ -50,3 +50,6 @@ A reports is generated with the Extent framework and can be located in below loc
 
 A simple log file is currently generated but can be enhanced to caputre details in the framework for ease of troubleshooting and information. The current log file can be found at
 - <PROJECT_HOME>/logs/automationScript.log
+
+### Adding Tests
+You can add new tests under the package com.automation.tests folder in the test package. Make sure to create a new branch from the main branch to obtain a stable version of the framework. 
