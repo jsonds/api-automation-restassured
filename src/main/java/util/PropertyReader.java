@@ -21,6 +21,7 @@ public class PropertyReader {
             InputStream propertyFileStream = PropertyReader.class.getClassLoader().getResourceAsStream("environment.properties");
             if (propertyFileStream != null) {
                 prop.load(propertyFileStream);
+                LoggerUtil.log("The property file was read successfully",LogLevels.INFO);
             } else {
                 LoggerUtil.log("Cannot find environment.properties  file", LogLevels.ERROR);
             }

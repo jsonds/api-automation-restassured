@@ -4,7 +4,9 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.asserts.SoftAssert;
+import report.TestListener;
 import util.LoggerUtil;
 import util.PropertyReader;
 
@@ -12,6 +14,8 @@ import static framework.Constants.COLON_DOUBLE_SLASH;
 import static framework.Constants.SINGLE_SLASH;
 import static io.restassured.RestAssured.given;
 
+//listener added to enable reporting
+@Listeners(TestListener.class)
 public class TestBase {
 
     public static RequestSpecification requestSpecification = null;
