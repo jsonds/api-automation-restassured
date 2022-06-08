@@ -2,7 +2,6 @@ package framework;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.asserts.SoftAssert;
@@ -27,15 +26,10 @@ public class TestBase {
         LoggerUtil.log("Before class method successfully completed", LogLevels.INFO);
     }
 
-    @AfterTest
-    public void assertTest() {
-        softAssert.assertAll();
-        LoggerUtil.log("After class method successfully completed", LogLevels.INFO);
-    }
-
     /**
      * This method provides the capability create the RequestSpecification which is used to invoke an API.
      * API protocol, HOST, Version are parameterized and is configured via a property file.
+     *
      * @return RequestSpecBuilder object
      */
     @BeforeClass
